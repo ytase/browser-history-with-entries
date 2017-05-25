@@ -1,0 +1,54 @@
+{
+  "name": "browser-history-with-entries",
+  "keywords": [
+    "history"
+  ],
+  "version": "0.0.1",
+  "description": "Get all the continuous entries for the tab in BrowserHistory",
+  "main": "build/browser-history-with-entries.js",
+  "jsnext:main": "build/browser-history-with-entries.es2015.js",
+  "repository": "ytase/browser-history-with-entries",
+  "bugs": {
+    "url": "https://github.com/ytase/browser-history-with-entries/issues"
+  },
+  "homepage": "https://github.com/ytase/browser-history-with-entries#readme",
+  "author": "Mikaël Gourlaouen <gourlaouen.mikael@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "karma start",
+    "build:modern": "rollup -c",
+    "build:legacy": "rollup -c rollup.config.legacy.js",
+    "build": "npm run build:modern && npm run build:legacy",
+    "prepublish": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "history": "^4.6.1",
+    "karma": "^1.7.0",
+    "karma-browserstack-launcher": "^1.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-rollup-plugin": "^0.2.4",
+    "karma-safari-launcher": "^1.0.0",
+    "mocha": "^3.2.0",
+    "rollup": "^0.36.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1"
+  },
+  "peerDependencies": {
+    "history": "^4.6.1"
+  },
+  "dependencies": {
+    "store2": "^2.5.1"
+  }
+}
