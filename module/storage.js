@@ -10,10 +10,10 @@ const loadHistory = location => {
             tabKey: !location.key ? "" : location.key,
             entries: [location],
             index: 0,
+            location
         }
     }
-
-    return { tabKey: location.key, entries, index }
+    return { tabKey: location.key, entries, index, location }
 }
 
 const saveHistory = (tabKey, { entries, index }) => {
