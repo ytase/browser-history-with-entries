@@ -11,8 +11,9 @@ const BrowserHistoryWithEntries = (options = {}) => {
 	} = loadHistory(browserHistory.location)
 
 	browserHistory.listen((newLocation, action) => {
+		console.log(action, newLocation)
 		if (!tabKey && newLocation.key) {
-			tabKey = newLocation.key
+			tabKey = !newLocation.key ? "" : newLocation.key
 		}
 
 		switch (action) {
@@ -32,13 +33,14 @@ const BrowserHistoryWithEntries = (options = {}) => {
 
 		proxy.index = index
 		proxy.entries = entries
+		proxy.location = newLocation
 
 		if (tabKey) {
 			saveHistory(tabKey, proxy)
 		}
 	})
 
-	const proxy = Object.assign({}, browserHistory, { index, entries })
+	const proxy = Object.assign({}, browserHistory, { index, entries, location })
 
 	return proxy
 }

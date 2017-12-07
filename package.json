@@ -49,6 +49,7 @@
     "history": "^4.6.1"
   },
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "store2": "^2.5.1"
   }
 }
