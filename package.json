@@ -3,7 +3,7 @@
   "keywords": [
     "history"
   ],
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "Get all the continuous entries for the tab in BrowserHistory",
   "main": "build/browser-history-with-entries.js",
   "jsnext:main": "build/browser-history-with-entries.es2015.js",
@@ -25,6 +25,7 @@
     "babel-cli": "^6.22.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "history": "^4.6.1",
@@ -48,8 +49,7 @@
   "peerDependencies": {
     "history": "^4.6.1"
   },
-  "dependencies": {
-    "babel-preset-react": "^6.24.1",
+  "dependencies": {    
     "store2": "^2.5.1"
   }
 }
