@@ -7,13 +7,12 @@ const loadHistory = location => {
 
     if (!Array.isArray(entries) || !location.key) {
         return {
-            tabKey: !location.key ? "" : location.key,
+            tabKey: location.key || '',
             entries: [location],
             index: 0,
-            location
         }
     }
-    return { tabKey: location.key, entries, index, location }
+    return { tabKey: location.key || "", entries, index }
 }
 
 const saveHistory = (tabKey, { entries, index }) => {
