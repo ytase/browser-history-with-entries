@@ -1,8 +1,8 @@
-import createHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history'
 import { loadHistory, saveHistory } from './storage'
 
 const BrowserHistoryWithEntries = (options = {}) => {
-	const browserHistory = createHistory(options)
+	const browserHistory = createBrowserHistory(options)
 
 	let {
 		tabKey,
